@@ -4,12 +4,9 @@
 
 仓库：https://github.com/zhaojinting2020/kb-robotics
 
-## 写作与同步（飞书为主）
+## 写作与同步
 
-1. 在飞书写 / 改
-2. Cursor 拉取到本仓 `content/`
-3. Obsidian 打开 `content/` 审阅
-4. `git push`
+主要更新地点为飞书云文档，不定时同步到 github
 
 ## 快速开始
 
