@@ -4,7 +4,6 @@
 
 在线阅读：https://zhaojinting2020.github.io/kb-robotics/
 
-拆分自私有知识库 [bookmarks-kb](https://github.com/zhaojinting2020/bookmarks-kb)。
 
 ## 快速开始
 
@@ -34,13 +33,9 @@ npx quartz build --serve
 | [`20-自动驾驶/30-Prediction-预测`](content/20-自动驾驶/30-Prediction-预测/) | 轨迹预测与相关论文 |
 | [`content/attachments/`](content/attachments/) | PDF / 图片（Git LFS） |
 
-## 附件说明
-
-超大厂商 SDK 目录（如 STM32 StdPeriph 全量树）未打进本仓。
 
 ## 相关仓库
 
 | 仓库 | 说明 |
 |------|------|
-| [kb-quant-finance](https://github.com/zhaojinting2020/kb-quant-finance) | 量化金融笔记 |
 | [kb-deep-learning-ai](https://github.com/zhaojinting2020/kb-deep-learning-ai) | 深度学习与 AI 笔记 |
