@@ -1,9 +1,15 @@
 # 机器人与自动驾驶
 
-机器人与自动驾驶学习笔记（Obsidian vault + [Quartz](https://quartz.jzhao.xyz) 站点）。
+机器人与自动驾驶学习笔记（Obsidian vault）。
 
-在线阅读：https://zhaojinting2020.github.io/kb-robotics/
+仓库：https://github.com/zhaojinting2020/kb-robotics
 
+## 写作与同步（飞书为主）
+
+1. 在飞书写 / 改
+2. Cursor 拉取到本仓 `content/`
+3. Obsidian 打开 `content/` 审阅
+4. `git push`
 
 ## 快速开始
 
@@ -15,13 +21,6 @@ cd kb-robotics
 
 用 Obsidian 打开 `content/` 作为 vault，从 [`content/index.md`](content/index.md) 进入。
 
-本地预览站点：
-
-```bash
-npm ci
-npx quartz build --serve
-```
-
 ## 目录
 
 | 路径 | 内容 |
@@ -31,11 +30,15 @@ npx quartz build --serve
 | [`20-自动驾驶/10-教程与综述`](content/20-自动驾驶/10-教程与综述/) | Apollo、课程与工具 |
 | [`20-自动驾驶/20-Planning-规划`](content/20-自动驾驶/20-Planning-规划/) | 规划算法与 Visual Navigation |
 | [`20-自动驾驶/30-Prediction-预测`](content/20-自动驾驶/30-Prediction-预测/) | 轨迹预测与相关论文 |
-| [`content/attachments/`](content/attachments/) | PDF / 图片（Git LFS） |
+| [`attachments`](content/attachments/) | PDF / 图片（Git LFS） |
 
+## 附件说明
+
+超大厂商 SDK 目录（如 STM32 StdPeriph 全量树）未打进本仓。
 
 ## 相关仓库
 
 | 仓库 | 说明 |
 |------|------|
+| [kb-quant-finance](https://github.com/zhaojinting2020/kb-quant-finance) | 量化金融笔记 |
 | [kb-deep-learning-ai](https://github.com/zhaojinting2020/kb-deep-learning-ai) | 深度学习与 AI 笔记 |

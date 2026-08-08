@@ -1,11 +1,15 @@
 ---
 title: 机器人与自动驾驶
-description: 机器人与自动驾驶学习笔记（Obsidian + Quartz）
+description: 机器人与自动驾驶学习笔记（Obsidian vault）
 ---
 
 # 机器人与自动驾驶
 
 个人机器人与自动驾驶学习库。建议先看 MOC，再按编号目录下钻。
+
+仓库：https://github.com/zhaojinting2020/kb-robotics
+
+写作：飞书改正文 → Cursor 拉取 → Obsidian 审链 → 推 GitHub。
 
 ## 从这里开始
 

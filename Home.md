@@ -2,13 +2,16 @@
 
 个人机器人与自动驾驶学习库。
 
-站点入口与 Obsidian 首页一致：[`content/index.md`](content/index.md)
+Obsidian 首页：[`content/index.md`](content/index.md)
+
+仓库：https://github.com/zhaojinting2020/kb-robotics
+
+写作：飞书改正文 → Cursor 拉取 → Obsidian 审链 → 推 GitHub。
 
 ## 从这里开始
 
 1. [机器人 MOC](content/00-导航/MOC-robotics.md)
 2. [自动驾驶 MOC](content/00-导航/MOC-autopilot.md)
-3. [在线阅读（GitHub Pages）](https://zhaojinting2020.github.io/kb-robotics/)
 
 ## 编号目录
 
@@ -22,5 +25,5 @@
 
 ## 使用方式
 
-- Obsidian：打开本仓库的 `content/` 目录作为 vault（推荐）
+- Obsidian：打开 `content/` 作为 vault
 - 附件需本机已安装 Git LFS
