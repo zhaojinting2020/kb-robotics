@@ -1,34 +1,46 @@
 # 机器人与自动驾驶
 
-机器人与自动驾驶学习笔记（从 bookmarks-kb 拆出）
+机器人与自动驾驶学习笔记（Obsidian vault + [Quartz](https://quartz.jzhao.xyz) 站点）。
+
+在线阅读：https://zhaojinting2020.github.io/kb-robotics/
 
 拆分自私有知识库 [bookmarks-kb](https://github.com/zhaojinting2020/bookmarks-kb)。
 
-## 怎么用
+## 快速开始
 
-1. `git clone` 本仓库
-2. 用 Obsidian 打开仓库根目录作为 vault
-3. 入口：`Home.md` → `index/MOC-*.md` → `content/机器人/` / `content/自动驾驶/`
+```bash
+git lfs install
+git clone https://github.com/zhaojinting2020/kb-robotics.git
+cd kb-robotics
+```
+
+用 Obsidian 打开 `content/` 作为 vault，从 [`content/index.md`](content/index.md) 进入。
+
+本地预览站点：
+
+```bash
+npm ci
+npx quartz build --serve
+```
 
 ## 目录
 
-| 路径 | 用途 |
+| 路径 | 内容 |
 |------|------|
-| `content/机器人/` | 机器人笔记 |
-| `content/自动驾驶/` | 自动驾驶笔记 |
-| `attachments/` | 笔记引用的 PDF / 图片（子集） |
-| `index/` | MOC |
-| `Home.md` | 入口 |
-
-## 与总仓关系
-
-- 流水线脚本仍在 `bookmarks-kb`
-- 本仓面向阅读与专题整理
+| [`10-机器人/10-ROS`](content/10-机器人/10-ROS/) | ROS 基础与实践 |
+| [`10-机器人/20-运动学与控制`](content/10-机器人/20-运动学与控制/) | 运动学、动力学、轨迹规划 |
+| [`20-自动驾驶/10-教程与综述`](content/20-自动驾驶/10-教程与综述/) | Apollo、课程与工具 |
+| [`20-自动驾驶/20-Planning-规划`](content/20-自动驾驶/20-Planning-规划/) | 规划算法与 Visual Navigation |
+| [`20-自动驾驶/30-Prediction-预测`](content/20-自动驾驶/30-Prediction-预测/) | 轨迹预测与相关论文 |
+| [`content/attachments/`](content/attachments/) | PDF / 图片（Git LFS） |
 
 ## 附件说明
 
-超大厂商 SDK 目录（如 STM32 StdPeriph 全量树）未打进本仓，完整附件仍在总仓百度网盘 / 本地 `bookmarks-kb/attachments/`。
+超大厂商 SDK 目录（如 STM32 StdPeriph 全量树）未打进本仓。
 
-## 附件同步
+## 相关仓库
 
-本仓 `attachments/` 使用 Git LFS。新机器先执行 `git lfs install` 再 clone/pull。
+| 仓库 | 说明 |
+|------|------|
+| [kb-quant-finance](https://github.com/zhaojinting2020/kb-quant-finance) | 量化金融笔记 |
+| [kb-deep-learning-ai](https://github.com/zhaojinting2020/kb-deep-learning-ai) | 深度学习与 AI 笔记 |
