@@ -1,25 +1,10 @@
 # 机器人
 
-28 bookmarks
-
-## PLC 与工业
-
-飞书 + 抓取笔记（**22** 篇）：[MOC-plc-industrial](MOC-plc-industrial.md)
+机器人主题索引（已移除 PLC / 嵌入式工业通信）
 
 ## ROS
 
 - 清华未来机器人团队的个人空间-清华未来机器人团队个人主页-哔哩哔哩视频 — [url](https://space.bilibili.com/486291712/channel/seriesdetail?sid=353001)
-
-## 嵌入式系统
-
-- snapshot ensemble tutorial with keras | Kaggle — [url](https://www.kaggle.com/code/fkdplc/snapshot-ensemble-tutorial-with-keras)
-- 创建ReWorks自引导工程-CSDN博客 — [url](https://blog.csdn.net/zhengluanfeng1985/article/details/131796154?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-131796154-blog-140803831.235^v43^pc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.2&utm_relevant_index=4)
-- 明伟220转24V开关电源12V监控S-120/150/200/350W变压器DC5V直流-淘宝网 — [url](https://item.taobao.com/item.htm?id=520127721240&spm=a21m98.27004841&skuId=4948888445267)
-
-## 机器人/PLC与工业/Realman-机械臂
-
-- [【睿尔曼-RealMan】睿尔曼机器人快速使用手册V1.5 - 睿尔曼智能论坛](../content/机器人/PLC与工业/Realman-机械臂/睿尔曼快速使用手册-V1.5.md) — [url](https://bbs.realman-robotics.cn/question/117.html)
-- [博客： RM机械臂奇异点分析及规避办法 | 睿尔曼智能科技](../content/机器人/PLC与工业/Realman-机械臂/机械臂奇异点规避。md) — [url](https://develop.realman-robotics.com/blog/arm/roboticSingularity/)
 
 ## 机器人/ROS/入门与通信
 
@@ -37,19 +22,7 @@
 - [ROS史话36篇 | 27. ROS之MoveIt! - 知乎](../content/机器人/ROS/运动规划与建模/ROS-MoveIt-简介。md) — [url](https://zhuanlan.zhihu.com/p/77395375)
 - [ROS机器人建模与仿真（一）——URDF模型的建立和改进-CSDN博客](../content/机器人/ROS/运动规划与建模/URDF-建模与-xacro.md) — [url](https://blog.csdn.net/qq_43551910/article/details/121773348)
 
-## 机器人/嵌入式系统/其他
-
-- [【视觉机械臂抓取入门教程】(三连多的话加快更新进度)第一次课 ：流程总览 （机器人+机械臂+运动学逆解+路径规划+图像处理+深度学习）_哔哩哔哩_bilibili](../content/机器人/嵌入式系统/其他/视觉抓取入门流程。md) — [url](https://www.bilibili.com/video/BV1dE411T73U/?vd_source=c8041efd376e7f34e73272f6ae86b7a5)
-
-## 机器人/嵌入式系统/现场总线与RTOS
-
-- [EtherCAT (学习笔记)-CSDN博客](../content/机器人/嵌入式系统/现场总线与RTOS/EtherCAT-实时以太网。md) — [url](https://blog.csdn.net/pwl999/article/details/109397700)
-- [PLCopen Motion Control — ECI documentation](../content/机器人/嵌入式系统/现场总线与RTOS/PLCopen-运动控制。md) — [url](https://eci.intel.com/docs/2.6/components/plcopen-motion.html)
-- [国产嵌入式实时操作系统Reworks全接触（转）-CSDN博客](../content/机器人/嵌入式系统/现场总线与RTOS/ReWorks-RTOS-概览。md) — [url](https://blog.csdn.net/demon88776542/article/details/84647588)
-
 ## 机器人/运动学与控制
-
-- [What is SIMATIC TDC (SIMATIC Technology and Drives Control)? - YouTube](../content/机器人/运动学与控制/SIMATIC-TDC-运动控制简介。md) — [url](https://www.youtube.com/watch?v=oIwEOGzGfl0)
 
 ## 机器人/运动学与控制/理论参考
 
@@ -68,3 +41,4 @@
 ## 运动学与控制
 
 - Books/机器人学/机器人学导论（原书第3版）.pdf at master · CHH3213/Books · GitHub — [url](https://github.com/CHH3213/Books/blob/master/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E5%AF%BC%E8%AE%BA%EF%BC%88%E5%8E%9F%E4%B9%A6%E7%AC%AC3%E7%89%88%EF%BC%89.pdf)
+
