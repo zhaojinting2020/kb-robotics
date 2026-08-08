@@ -1,4 +1,17 @@
 * text=auto eol=lf
 
+# Git LFS for vault attachments
 content/attachments/** filter=lfs diff=lfs merge=lfs -text
 attachments/** filter=lfs diff=lfs merge=lfs -text
+
+# Language stats: notes are Markdown; Quartz is site tooling
+*.md linguist-detectable=true
+quartz/** linguist-vendored
+*.ts linguist-vendored
+*.tsx linguist-vendored
+*.scss linguist-vendored
+package.json linguist-vendored
+package-lock.json linguist-generated
+tsconfig.json linguist-vendored
+globals.d.ts linguist-vendored
+index.d.ts linguist-vendored
