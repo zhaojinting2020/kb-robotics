@@ -28,3 +28,7 @@
 ## 附件说明
 
 超大厂商 SDK 目录（如 STM32 StdPeriph 全量树）未打进本仓，完整附件仍在总仓百度网盘 / 本地 `bookmarks-kb/attachments/`。
+
+## 附件同步
+
+本仓 `attachments/` 使用 Git LFS。新机器先执行 `git lfs install` 再 clone/pull。
