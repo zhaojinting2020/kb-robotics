@@ -1,0 +1,21 @@
+{
+  "theme": "system",
+  "cssTheme": "",
+  "baseFontSize": 19,
+  "translucency": false,
+  "nativeMenus": true,
+  "enabledCssSnippets": [
+    "hide-kb-folders",
+    "explorer-depth",
+    "math-readable",
+    "feishu-readable",
+    "references-readable",
+    "quiet-notes",
+    "kb-unverified",
+    "mermaid-cjk-fix"
+  ],
+  "textFontFamily": "",
+  "baseFontSizeAction": true,
+  "showRibbon": true,
+  "accentColor": ""
+}

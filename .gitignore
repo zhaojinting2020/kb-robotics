@@ -1,0 +1,8 @@
+.obsidian/workspace*
+.obsidian/workspace.json
+.obsidian/cache
+.trash/
+.knowledge-vault/
+.DS_Store
+*.swp
+__pycache__/

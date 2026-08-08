@@ -1,0 +1,38 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "preview",
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "showIndentGuide": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "cache/drafts",
+  "attachmentFolderPath": "attachments",
+  "showUnsupportedFiles": true,
+  "tabSize": 2,
+  "trailingWhitespace": "trim",
+  "userIgnoreFilters": [
+    "/^\\.smart-env\\//",
+    "/^cache\\//",
+    "/^scripts\\//",
+    "/^\\.cursor\\//",
+    "/^\\.git\\//",
+    "/^\\.knowledge-vault\\//",
+    "/^README\\.md$/",
+    "/^pyproject\\.toml$/"
+  ],
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": true,
+    "margin": "2",
+    "downscalePercent": 100
+  }
+}
