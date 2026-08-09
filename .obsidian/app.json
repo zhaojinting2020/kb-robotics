@@ -24,7 +24,6 @@
     "/^\\.cursor\\//",
     "/^\\.git\\//",
     "/^\\.knowledge-vault\\//",
-    "/^README\\.md$/",
     "/^pyproject\\.toml$/"
   ],
   "promptDelete": false,

@@ -1,29 +1,7 @@
-# 机器人与自动驾驶
+---
+custom-width: 85
+---
 
-个人机器人与自动驾驶学习库。
+# 入口已合并
 
-Obsidian 首页：[`content/index.md`](content/index.md)
-
-仓库：https://github.com/zhaojinting2020/kb-robotics
-
-写作：飞书改正文 → Cursor 拉取 → Obsidian 审链 → 推 GitHub。
-
-## 从这里开始
-
-1. [机器人 MOC](content/00-导航/MOC-robotics.md)
-2. [自动驾驶 MOC](content/00-导航/MOC-autopilot.md)
-
-## 编号目录
-
-| 目录 | 内容 |
-|------|------|
-| [10-ROS](content/10-机器人/10-ROS/) | ROS 基础与实践 |
-| [20-运动学与控制](content/10-机器人/20-运动学与控制/) | 运动学、动力学、轨迹规划 |
-| [10-教程与综述](content/20-自动驾驶/10-教程与综述/) | Apollo、课程与工具 |
-| [20-Planning-规划](content/20-自动驾驶/20-Planning-规划/) | 规划算法与 Visual Navigation |
-| [30-Prediction-预测](content/20-自动驾驶/30-Prediction-预测/) | 轨迹预测与相关论文 |
-
-## 使用方式
-
-- Obsidian：打开 `content/` 作为 vault
-- 附件需本机已安装 Git LFS
+请打开 [README](README.md)（Obsidian Homepage 与 GitHub 仓库首页同一份）。
