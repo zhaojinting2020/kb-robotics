@@ -1,0 +1,6 @@
+/* 知识库表格：未核实数据 — 浅灰，非删除线 */
+.markdown-rendered .kv-unverified,
+.markdown-source-view .kv-unverified {
+  color: var(--text-muted);
+  opacity: 0.85;
+}

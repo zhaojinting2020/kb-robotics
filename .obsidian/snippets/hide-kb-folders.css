@@ -1,0 +1,15 @@
+/* bookmarks-kb: hide non-note folders from file explorer sidebar */
+.tree-item[data-path="cache"],
+.tree-item[data-path^="cache/"],
+.tree-item[data-path="scripts"],
+.tree-item[data-path^="scripts/"],
+.tree-item[data-path="README.md"],
+.tree-item[data-path="pyproject.toml"],
+.tree-item[data-path=".cursor"],
+.tree-item[data-path^=".cursor/"],
+.tree-item[data-path=".git"],
+.tree-item[data-path^=".git/"],
+.tree-item[data-path=".knowledge-vault"],
+.tree-item[data-path^=".knowledge-vault/"] {
+  display: none !important;
+}

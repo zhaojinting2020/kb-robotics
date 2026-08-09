@@ -1,0 +1,7 @@
+{
+  "imageNamePattern": "${date}-${noteName}-${prompt}",
+  "defaultDir": "attachments/${noteName}",
+  "renameWithPrompt": false,
+  "renameOnlyImages": true,
+  "handlePasteEvent": true
+}

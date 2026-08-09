@@ -1,0 +1,33 @@
+/* Obsidian Canvas readability tweaks */
+.canvas-node-container {
+  --canvas-node-border-width: 1px;
+}
+
+.canvas-node-container[data-type="group"] .canvas-node-label {
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.canvas-node-container[data-type="file"] .canvas-node-content {
+  font-size: 0.88em;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.canvas-node-container[data-type="text"] .markdown-preview-view {
+  font-size: 0.9em;
+}
+
+.canvas-edges svg path {
+  stroke-width: 2px;
+}
+
+.theme-dark .canvas-edges svg path {
+  opacity: 0.85;
+}
+
+.theme-light .canvas-edges svg path {
+  opacity: 0.75;
+}

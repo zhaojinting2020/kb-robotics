@@ -1,0 +1,37 @@
+/*
+ * Mermaid 中文/中英混排标签右侧被裁切
+ *
+ * 根因（Obsidian + Mermaid 上游）：
+ * - Mermaid 用 trebuchet/arial 等无中文字形字体测 label 宽度 → 框偏窄
+ * - 实际绘制退回到 Microsoft YaHei 等 → 文字更宽
+ * - foreignObject 默认 overflow:hidden → 多出的像素被硬切
+ *
+ * 参考：mermaid-js#814, Obsidian forum foreignObject 讨论
+ * 培训稿等含中文 Mermaid 的笔记依赖此 snippet，勿删。
+ */
+
+.markdown-rendered .mermaid svg foreignObject,
+.markdown-reading-view .mermaid svg foreignObject,
+.markdown-preview-view .mermaid svg foreignObject {
+  overflow: visible !important;
+}
+
+.markdown-rendered .mermaid .nodeLabel,
+.markdown-reading-view .mermaid .nodeLabel,
+.markdown-preview-view .mermaid .nodeLabel,
+.markdown-rendered .mermaid .label,
+.markdown-reading-view .mermaid .label,
+.markdown-preview-view .mermaid .label,
+.markdown-rendered .mermaid .cluster-label,
+.markdown-reading-view .mermaid .cluster-label,
+.markdown-rendered .mermaid .edgeLabel,
+.markdown-reading-view .mermaid .edgeLabel {
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Segoe UI", sans-serif !important;
+}
+
+.markdown-rendered .mermaid svg,
+.markdown-reading-view .mermaid svg,
+.markdown-preview-view .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

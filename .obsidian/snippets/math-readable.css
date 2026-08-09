@@ -1,0 +1,14 @@
+/* Readable block math spacing in reading view */
+.markdown-preview-view .math-block {
+  margin: 1.2em 0;
+  overflow-x: auto;
+}
+
+.markdown-preview-view mjx-container[display="true"] {
+  margin: 1.2em 0 !important;
+  overflow-x: auto;
+}
+
+.markdown-preview-view mjx-container:not([display="true"]) {
+  vertical-align: baseline;
+}

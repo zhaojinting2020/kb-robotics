@@ -1,0 +1,158 @@
+/* Feishu-sourced notes: images & captions (typography → quiet-notes.css) */
+
+/* ── 飞书图片说明（notation / 图片小标题）────────────────────────────
+ * 飞书文档：caption 居中；卡片/富文本 notation = 12px 辅助信息色 #8F959E
+ * 知识库约定：图片下一行即为小标题（见 scripts/lib/image_captions.py）
+ */
+body {
+  --font-image-caption: var(--font-text);
+  --font-size-image-caption: 12px;
+  --line-height-image-caption: 1.667; /* 12 × 1.667 ≈ 20px，贴近飞书 */
+  --color-image-caption: #8f959e;
+  --image-caption-margin: 0.35em auto 1.15em;
+  --image-max-width: min(720px, 100%);
+}
+
+.theme-dark {
+  --color-image-caption: #757575;
+}
+
+.markdown-preview-view img,
+.markdown-preview-view .internal-embed.image-embed img {
+  max-width: var(--image-max-width);
+  height: auto;
+  display: block;
+  margin: 1em auto 0.35em;
+  border-radius: 4px;
+}
+
+.markdown-preview-view .internal-embed.image-embed {
+  display: block;
+  margin: 1em auto 0.35em;
+  max-width: var(--image-max-width);
+}
+
+/* B 站视频卡片（Obsidian 内 iframe 常被拦截，用封面 + 外链播放） */
+.markdown-preview-view .kb-video-card,
+.markdown-reading-view .kb-video-card {
+  max-width: var(--image-max-width);
+  margin: 1em auto 0.35em;
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.markdown-preview-view .kb-video-card a,
+.markdown-reading-view .kb-video-card a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.markdown-preview-view .kb-video-card img,
+.markdown-reading-view .kb-video-card img,
+.markdown-preview-view .kb-video-card .internal-embed.image-embed img,
+.markdown-reading-view .kb-video-card .internal-embed.image-embed img {
+  width: 100%;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.markdown-preview-view .kb-video-card .internal-embed.image-embed,
+.markdown-reading-view .kb-video-card .internal-embed.image-embed {
+  margin: 0;
+  max-width: 100%;
+}
+
+.markdown-preview-view .kb-video-card-play,
+.markdown-reading-view .kb-video-card-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-size: 22px;
+  line-height: 56px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.markdown-preview-view .kb-video-card:hover .kb-video-card-play,
+.markdown-reading-view .kb-video-card:hover .kb-video-card-play {
+  background: rgba(251, 114, 153, 0.92);
+}
+
+/* 旧 iframe 容器（保留以防外链 HTML 预览） */
+.markdown-preview-view .kb-video,
+.markdown-reading-view .kb-video {
+  max-width: var(--image-max-width);
+  margin: 1em auto 0.35em;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+}
+
+.markdown-preview-view .kb-video iframe,
+.markdown-reading-view .kb-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* 图片块后第一行 = 小标题（plain paragraph 或 kb-image-caption） */
+:is(.markdown-preview-view, .markdown-reading-view) .internal-embed.image-embed + p,
+:is(.markdown-preview-view, .markdown-reading-view) .internal-embed.image-embed + p.kb-image-caption,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-video + p.kb-image-caption,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-video-card + p.kb-image-caption,
+.markdown-preview-view p.kb-image-caption,
+.markdown-reading-view p.kb-image-caption,
+.markdown-preview-view figure > figcaption,
+.markdown-reading-view figure > figcaption,
+.markdown-preview-view .kb-figure > figcaption,
+.markdown-reading-view .kb-figure > figcaption {
+  font-family: var(--font-image-caption);
+  font-size: var(--font-size-image-caption);
+  line-height: var(--line-height-image-caption);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-image-caption);
+  text-align: center;
+  margin: var(--image-caption-margin);
+  max-width: var(--image-max-width);
+}
+
+/* 小标题后接正文：收紧上间距，避免 quiet-notes 段间距过大 */
+:is(.markdown-preview-view, .markdown-reading-view) :is(p:has(> img), p:has(> a > img)) + p + p,
+:is(.markdown-preview-view, .markdown-reading-view) .internal-embed.image-embed + p + p,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-video + p.kb-image-caption + p,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-video-card + p.kb-image-caption + p,
+:is(.markdown-preview-view, .markdown-reading-view) p.kb-image-caption + p,
+.markdown-preview-view figure > figcaption + p,
+.markdown-reading-view figure > figcaption + p {
+  margin-block-start: 0.35em;
+}
+
+/* 培训结语高亮 callout（团队协作培训 §7） */
+.callout[data-callout="closing"] {
+  --callout-color: 214, 176, 40;
+  --callout-icon: lucide-lightbulb;
+  background: var(--text-highlight-bg, rgba(255, 255, 180, 0.45));
+  border: 1px solid rgba(214, 176, 40, 0.35);
+}
+
+.callout[data-callout="closing"] .callout-title {
+  display: none;
+}
+
+.callout[data-callout="closing"] .callout-content {
+  font-size: 1.02em;
+  line-height: 1.68;
+}

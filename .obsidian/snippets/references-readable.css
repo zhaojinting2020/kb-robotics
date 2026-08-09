@@ -1,0 +1,134 @@
+/*
+ * references-readable — 参考资料 / References 区块：论文参考文献式排版
+ * 配合 <div class="kb-references">…</div>（scripts/format_references.py）
+ */
+
+body {
+  --kb-ref-font-size: 0.8125rem;
+  --kb-ref-line-height: 1.58;
+  --kb-ref-number-width: 2.35rem;
+  --kb-ref-indent: 2.35rem;
+  --kb-ref-item-gap: 0.42em;
+  --kb-ref-section-gap: 1.75em;
+  --kb-ref-muted: var(--text-muted);
+}
+
+.theme-dark {
+  --kb-ref-muted: #9aa0a6;
+}
+
+/* ── 区块标题（参考资料 / 参考文献 / References）── */
+:is(.markdown-preview-view, .markdown-reading-view) h2[id="参考资料"],
+:is(.markdown-preview-view, .markdown-reading-view) h2[id="参考文献"],
+:is(.markdown-preview-view, .markdown-reading-view) h2[id="References"] {
+  font-size: 1.05em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 2.25em;
+  margin-bottom: 0.55em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+/* ── 参考文献列表容器 ── */
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references {
+  font-size: var(--kb-ref-font-size);
+  line-height: var(--kb-ref-line-height);
+  color: var(--kb-ref-muted);
+  counter-reset: kb-ref;
+  margin: 0.15em 0 var(--kb-ref-section-gap);
+  padding: 0;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > p,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > ul,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > ol,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > blockquote {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  background: none;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > p,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > ul > li,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > ol > li {
+  position: relative;
+  margin: var(--kb-ref-item-gap) 0;
+  padding-left: var(--kb-ref-indent);
+  text-indent: calc(-1 * var(--kb-ref-number-width));
+  counter-increment: kb-ref;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > p::before,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > ul > li::before,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references > ol > li::before {
+  content: "[" counter(kb-ref) "]";
+  display: inline-block;
+  width: calc(var(--kb-ref-number-width) - 0.4em);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  font-size: 0.95em;
+  color: var(--text-faint);
+  letter-spacing: 0.01em;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references h3,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references h4 {
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-normal);
+  margin: 1em 0 0.35em;
+  padding-left: 0;
+  text-indent: 0;
+  counter-reset: none;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references h3::before,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references h4::before {
+  content: none;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references a {
+  color: var(--text-normal);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--text-muted) 35%, transparent);
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references a:hover {
+  color: var(--interactive-accent);
+  border-bottom-color: var(--interactive-accent);
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references strong {
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references em,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references i {
+  font-style: italic;
+}
+
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references ul ul,
+:is(.markdown-preview-view, .markdown-reading-view) .kb-references ol ol {
+  margin: 0.2em 0 0;
+  padding-left: var(--kb-ref-indent);
+}
+
+/* 标题紧贴参考文献块时收紧间距 */
+:is(.markdown-preview-view, .markdown-reading-view) h2[id="参考资料"] + .kb-references,
+:is(.markdown-preview-view, .markdown-reading-view) h2[id="参考文献"] + .kb-references,
+:is(.markdown-preview-view, .markdown-reading-view) h2[id="References"] + .kb-references {
+  margin-top: 0.35em;
+}
+
+/* 源码模式：div 标签一眼可辨 */
+.markdown-source-view.mod-cm6 .cm-html-embed,
+.markdown-source-view.mod-cm6 .cm-line:has(.cm-hmd-html) {
+  font-family: var(--font-monospace);
+}

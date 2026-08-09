@@ -1,0 +1,10 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "templates",
+  "templates_pairs": [],
+  "startup_templates": [],
+  "enable_system_commands": false,
+  "shell_bin_path": "/bin/bash",
+  "user_scripts_folder": "",
+  "trigger_on_file_creation": false
+}

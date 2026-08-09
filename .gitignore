@@ -11,3 +11,12 @@ __pycache__/
 .obsidian/cache
 cache/
 .backup/
+
+# Obsidian community plugins: keep data.json, ignore vendor binaries
+.obsidian/plugins/**/main.js
+.obsidian/plugins/**/styles.css
+.obsidian/plugins/**/manifest.json
+.obsidian/plugins/smart-connections/smart_embed_env/
+.obsidian/plugins/omnisearch/search-cache.json
+.obsidian/plugins/obsidian-linter/default-misspellings.md
+.obsidian/themes/

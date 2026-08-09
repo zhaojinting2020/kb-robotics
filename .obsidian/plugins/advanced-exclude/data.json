@@ -1,0 +1,6 @@
+{
+  "excludeMode": "Full",
+  "obsidianIgnoreContent": "# Hidden from Obsidian UI (Advanced Exclude plugin reads this).\n# raw/ and attachments/ stay visible.\n\n.smart-env/\ncache/\nscripts/\n.cursor/\n.git/\n.knowledge-vault/\npyproject.toml\n",
+  "shouldIgnoreExcludedFiles": false,
+  "shouldIncludeGitIgnorePatterns": false
+}

@@ -1,0 +1,174 @@
+/*
+ * explorer-depth — 文件树：仅字体灰度按深度递进（无左侧色条、无主题色）
+ * bookmarks-kb vault · Obsidian 1.12+（data-path 在 .tree-item-self）
+ *
+ * depth-0：vault 根、content/、index/
+ * depth-1…5：content/ 或 index/ 下逐级变淡
+ */
+
+.nav-files-container {
+  --kb-depth-0: var(--text-normal);
+  --kb-depth-1: color-mix(in srgb, var(--text-normal) 92%, var(--text-muted));
+  --kb-depth-2: color-mix(in srgb, var(--text-normal) 82%, var(--text-muted));
+  --kb-depth-3: color-mix(in srgb, var(--text-normal) 72%, var(--text-muted));
+  --kb-depth-4: color-mix(in srgb, var(--text-normal) 62%, var(--text-faint));
+  --kb-depth-5: color-mix(in srgb, var(--text-normal) 52%, var(--text-faint));
+}
+
+/* vault 根（Home.md 等，不在 content/index 子树内） */
+.nav-files-container > .tree-item > .tree-item-self {
+  color: var(--kb-depth-0);
+}
+
+/* content / index 根：最深 + 略加粗 */
+.nav-files-container .tree-item-self[data-path="content"],
+.nav-files-container .tree-item[data-path="content"] > .tree-item-self,
+.nav-files-container .tree-item-self[data-path="index"],
+.nav-files-container .tree-item[data-path="index"] > .tree-item-self {
+  color: var(--kb-depth-0);
+  font-weight: 600;
+}
+
+/* ── content/ 下 L1–L5：越深越淡（文件 + 文件夹同色）── */
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="content"])
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self,
+.nav-files-container
+  .tree-item[data-path="content"]
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-1);
+  font-weight: inherit;
+}
+
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="content"])
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self,
+.nav-files-container
+  .tree-item[data-path="content"]
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-2);
+}
+
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="content"])
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self,
+.nav-files-container
+  .tree-item[data-path="content"]
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-3);
+}
+
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="content"])
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self,
+.nav-files-container
+  .tree-item[data-path="content"]
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-4);
+}
+
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="content"])
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self,
+.nav-files-container
+  .tree-item[data-path="content"]
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-5);
+}
+
+/* index/ 子树 L1–L3 */
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="index"])
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-1);
+}
+
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="index"])
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-2);
+}
+
+.nav-files-container
+  .tree-item:has(> .tree-item-self[data-path="index"])
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item.nav-folder
+  > .tree-item-children
+  > .tree-item
+  > .tree-item-self {
+  color: var(--kb-depth-3);
+}
+
+/* 选中项 */
+.nav-files-container .tree-item-self.is-active {
+  color: var(--nav-item-color-active, var(--text-normal)) !important;
+  font-weight: var(--nav-item-weight-active, 600) !important;
+}

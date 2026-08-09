@@ -1,0 +1,18 @@
+{
+  "language": "auto",
+  "enableSlider": true,
+  "controlMode": "slider",
+  "sliderWidth": 100,
+  "enableTextField": true,
+  "defaultWidthUnit": "%",
+  "defaultWidth": 50,
+  "minPercent": 30,
+  "maxPercent": 100,
+  "enablePerNoteWidth": true,
+  "yamlFrontMatterKey": "custom-width",
+  "enableCodeBlockWidth": true,
+  "codeBlockWidth": 900,
+  "codeBlockWidthUnit": "px",
+  "applyToReadingView": true,
+  "applyToEditingView": true
+}
